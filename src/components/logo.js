@@ -1,15 +1,18 @@
 import React, {Component} from "react";
  
+import { Link } from 'react-router-dom';
+
 class Logo extends Component{
  render() {
   const size = {
-    height: 105,
-    width: 105
+    height: this.props.size ? this.props.size : 105,
+     width: this.props.size ? this.props.size : 105,
 }
      return (
          <div className="logo-main">
-           
-           <img styles={size} alt="daily smarty ui image logo big" src="/assets/ds_circle_logo.png"/>
+           <Link to="/">
+              <img styles={size} alt="daily smarty ui image logo big" src="/assets/ds_circle_logo.png"/>
+         </Link>
          </div>
      )
  }
